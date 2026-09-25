@@ -50,7 +50,7 @@ amazon-ml-2026/
 │   ├── experiments/                   # Rapid prototyping notebooks
 │   └── visualization/                 # Performance and trade-off visualization
 │
-├── src/business_entity_resolution/    # Core ML system package
+├── src/    # Core ML system package
 │   ├── data/                          # Streaming data loaders & sampling
 │   ├── normalization/                 # Name, address, and country standardizers
 │   ├── features/                      # String similarity & cross-source features
