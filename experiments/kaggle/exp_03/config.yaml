@@ -1,0 +1,8 @@
+﻿experiment_id: "kaggle-exp_03"
+platform: "Kaggle"
+title: "Kaggle Exp 03: Dense Vector Bi-Encoder Retrieval"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

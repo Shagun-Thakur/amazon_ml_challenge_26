@@ -1,0 +1,33 @@
+# Core tabular & scientific computing
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0,<3.0.0
+scipy>=1.10.0,<2.0.0
+scikit-learn>=1.3.0,<2.0.0
+
+# String distance, fuzzy matching & phonetic algorithms
+rapidfuzz>=3.5.0
+jellyfish>=1.0.0
+Levenshtein>=0.23.0
+
+# Gradient Boosted Decision Trees
+lightgbm>=4.1.0
+xgboost>=2.0.0
+catboost>=1.2.0
+
+# Deep learning & vector search (for dense retrieval / cross-encoders)
+torch>=2.1.0
+transformers>=4.36.0
+sentence-transformers>=2.3.0
+faiss-cpu>=1.7.4
+
+# Configuration, serialization & utilities
+pyyaml>=6.0.1
+tqdm>=4.66.0
+joblib>=1.3.0
+pydantic>=2.5.0
+pandera>=0.18.0
+
+# Interactive notebooks & visualization
+jupyterlab>=4.0.0
+matplotlib>=3.8.0
+seaborn>=0.13.0

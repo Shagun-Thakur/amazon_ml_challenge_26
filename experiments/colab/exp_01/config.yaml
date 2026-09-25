@@ -1,0 +1,8 @@
+﻿experiment_id: "colab-exp_01"
+platform: "Colab"
+title: "Colab Exp 01: Preprocessing & Legal Suffix Normalization"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

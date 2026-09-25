@@ -1,0 +1,8 @@
+﻿experiment_id: "kaggle-exp_05"
+platform: "Kaggle"
+title: "Kaggle Exp 05: Multi-Pass Hybrid Union Blocking"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

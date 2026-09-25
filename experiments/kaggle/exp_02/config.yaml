@@ -1,0 +1,8 @@
+﻿experiment_id: "kaggle-exp_02"
+platform: "Kaggle"
+title: "Kaggle Exp 02: Phonetic & Character N-Gram Blocking"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

@@ -1,0 +1,8 @@
+﻿experiment_id: "sagemaker-exp_01"
+platform: "SageMaker"
+title: "SageMaker Exp 01: Full-Scale Dense Corpus Indexing"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

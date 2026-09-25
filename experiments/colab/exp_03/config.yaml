@@ -1,0 +1,8 @@
+﻿experiment_id: "colab-exp_03"
+platform: "Colab"
+title: "Colab Exp 03: Model Family Benchmarking"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

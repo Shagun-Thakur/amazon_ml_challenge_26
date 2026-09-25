@@ -1,0 +1,8 @@
+﻿experiment_id: "sagemaker-exp_03"
+platform: "SageMaker"
+title: "SageMaker Exp 03: Full Test Set Inference & Candidate Pairs Scaling"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

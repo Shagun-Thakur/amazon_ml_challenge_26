@@ -1,0 +1,8 @@
+﻿experiment_id: "sagemaker-exp_02"
+platform: "SageMaker"
+title: "SageMaker Exp 02: Deep Cross-Encoder Fine-Tuning & Distillation"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

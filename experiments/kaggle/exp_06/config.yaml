@@ -1,0 +1,8 @@
+﻿experiment_id: "kaggle-exp_06"
+platform: "Kaggle"
+title: "Kaggle Exp 06: Macro F0.5 Calibration & Dynamic Singleton Gating"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

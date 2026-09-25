@@ -1,0 +1,8 @@
+﻿experiment_id: "local-exp_03"
+platform: "Local"
+title: "Local Exp 03: End-to-End Pipeline Smoke Test & Validation"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

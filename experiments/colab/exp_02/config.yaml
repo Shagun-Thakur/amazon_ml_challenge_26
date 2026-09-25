@@ -1,0 +1,8 @@
+﻿experiment_id: "colab-exp_02"
+platform: "Colab"
+title: "Colab Exp 02: Feature Ablation Study"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

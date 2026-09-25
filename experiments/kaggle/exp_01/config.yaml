@@ -1,0 +1,8 @@
+﻿experiment_id: "kaggle-exp_01"
+platform: "Kaggle"
+title: "Kaggle Exp 01: Fast Lexical Baseline"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

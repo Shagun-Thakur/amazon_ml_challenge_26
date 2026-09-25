@@ -1,0 +1,8 @@
+﻿experiment_id: "local-exp_01"
+platform: "Local"
+title: "Local Exp 01: Leak-Free Validation Split Design"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

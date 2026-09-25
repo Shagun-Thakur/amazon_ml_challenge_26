@@ -1,0 +1,8 @@
+﻿experiment_id: "local-exp_02"
+platform: "Local"
+title: "Local Exp 02: Pure Lexical High-Speed Blocking"
+parameters:
+  seed: 42
+  sample_size: null
+logging:
+  level: "INFO"

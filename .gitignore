@@ -1,0 +1,113 @@
+# Git Ignore for Amazon ML Challenge 2026 - Terminal Titans
+
+# ==========================================
+# 1. Datasets & Raw Competition Data
+# ==========================================
+data/raw/
+data/processed/
+*.tsv
+*.csv
+# Whitelist small template/dummy files if needed explicitly
+!submission/output/matching_results.tsv
+!submission/output/candidate_pairs.tsv
+
+# ==========================================
+# 2. Large Artifacts, Models & Embeddings
+# ==========================================
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.parquet
+*.feather
+*.index
+*.faiss
+outputs/models/
+outputs/candidates/
+outputs/predictions/
+outputs/logs/
+outputs/figures/
+
+# ==========================================
+# 3. Python Environment & Cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# 4. Notebooks & Platform Checkpoints
+# ==========================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+.kaggle/
+kaggle.json
+.colab/
+
+# ==========================================
+# 5. Experiment Cache & Scratch
+# ==========================================
+experiments/**/results/*
+!experiments/**/results/.gitkeep
+experiments/**/artifacts/*
+!experiments/**/artifacts/.gitkeep
+scratch/
+
+# ==========================================
+# 6. Secrets, Credentials & Environment
+# ==========================================
+.env
+.env.*
+!.env.example
+credentials
+*.pem
+*.key
+aws_credentials
+*token*
+*secret*
+
+# ==========================================
+# 7. Operating System & IDE Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
