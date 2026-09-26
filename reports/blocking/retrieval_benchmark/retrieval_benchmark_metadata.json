@@ -1,0 +1,29 @@
+{
+  "seed": 42,
+  "validation_s1": 20000,
+  "positive_s1": 18933,
+  "zero_match_s1": 1067,
+  "positive_pairs": 69150,
+  "s2_true_target_pool": 33180,
+  "s2_total_target_pool": 133180,
+  "s3_true_target_pool": 35970,
+  "s3_total_target_pool": 135970,
+  "tfidf_ngram_range": [
+    3,
+    5
+  ],
+  "tfidf_max_features": 200000,
+  "hash_ngram_range": [
+    3,
+    5
+  ],
+  "hash_features": 262144,
+  "top_k_values": [
+    10,
+    25,
+    50,
+    100
+  ],
+  "query_batch_size": 250,
+  "read_chunk_size": 100000
+}

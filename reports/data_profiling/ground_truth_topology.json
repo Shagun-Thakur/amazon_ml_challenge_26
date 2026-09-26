@@ -1,0 +1,19 @@
+{
+  "ground_truth_rows": 2206821,
+  "unique_source1_ids": 2206821,
+  "min_matches": 0,
+  "max_matches": 11,
+  "mean_matches": 3.4612526344456573,
+  "median_matches": 3.0,
+  "zero_match_rows": 123247,
+  "one_match_rows": 119157,
+  "multiple_match_rows": 1964417,
+  "s1_to_s2_only": 143029,
+  "s1_to_s3_only": 164498,
+  "s1_to_s2_and_s3": 1776047,
+  "s1_to_neither": 123247,
+  "missing_s1_ids": 0,
+  "missing_s2_ids": 0,
+  "missing_s3_ids": 0,
+  "duplicate_mapping_rows": 0
+}

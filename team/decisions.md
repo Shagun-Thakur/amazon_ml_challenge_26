@@ -37,3 +37,21 @@ Chronological log of key architectural decisions made for the competition.
 - **Alternatives rejected:** Committing raw files to Git LFS or repository tracking.
 - **Reason:** Git repository bloat, clone timeouts, and violation of competition code versioning hygiene.
 - **Date:** 2026-09-25
+
+---
+
+### DEC-005: Deprecation of Heavy Local CPU Execution & Mandate for Cloud Acceleration
+- **Decision:** Terminate all full-scale Cartesian searches and heavy training on local PC hardware. Shift all intensive candidate blocking, vector indexing, and model training to cloud infrastructure (Kaggle / Colab / SageMaker).
+- **Evidence:** Running unindexed sparse matrix dot-products for 1.73M test records against 9.97M candidate pool records sequentially on a local CPU consumed >19.8 core-hours (~24 hours wall-clock time) and bottlenecked iteration.
+- **Alternatives rejected:** Continuing local single-threaded CPU runs.
+- **Reason:** Prevents project stalls and leverages multi-GPU instances and distributed cloud memory.
+- **Date:** 2026-09-26
+
+---
+
+### DEC-006: Algorithmic Upgrade to Inverted Indexing & Decoupled Execution
+- **Decision:** Permanently decouple validation benchmark evaluation from full-scale test set candidate generation. Replace naive Cartesian sparse matrix dot-products with inverted index token posting lists (BM25) or GPU vector search (FAISS).
+- **Evidence:** Over 98% of business pairs share zero common tokens. Inverted indices eliminate zero-overlap comparisons by design, reducing compute time by 100x.
+- **Alternatives rejected:** Monolithic brute-force scripts coupling validation with full inference.
+- **Reason:** Enables fast, iterative validation benchmarking in under 5 minutes.
+- **Date:** 2026-09-26

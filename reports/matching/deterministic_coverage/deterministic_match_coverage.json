@@ -1,0 +1,1037 @@
+{
+  "analysis": "deterministic_match_coverage",
+  "version": "v1",
+  "seed": 42,
+  "input_files": {
+    "S2": "/kaggle/working/reports/raw_vs_clean/csv/s2_positive_pair_analysis.csv",
+    "S3": "/kaggle/working/reports/raw_vs_clean/csv/s3_positive_pair_analysis.csv"
+  },
+  "rule_coverage": [
+    {
+      "source": "S2",
+      "rule": "R01_exact_clean_name",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 38038,
+      "pair_recall_pct": 21.432032544145322,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 31904,
+      "s1_entity_coverage_pct": 34.61843118957454
+    },
+    {
+      "source": "S2",
+      "rule": "R02_exact_clean_address",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 22188,
+      "pair_recall_pct": 12.501549452902266,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 17270,
+      "s1_entity_coverage_pct": 18.739352640545146
+    },
+    {
+      "source": "S2",
+      "rule": "R03_exact_clean_name_and_address",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 4745,
+      "pair_recall_pct": 2.673510553182858,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 4431,
+      "s1_entity_coverage_pct": 4.8079948784166495
+    },
+    {
+      "source": "S2",
+      "rule": "R04_numeric_overlap_ge_1",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 140021,
+      "pair_recall_pct": 78.89307084662106,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 77530,
+      "s1_entity_coverage_pct": 84.12634685706225
+    },
+    {
+      "source": "S2",
+      "rule": "R05_numeric_exact",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 103574,
+      "pair_recall_pct": 58.35746723611408,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 58685,
+      "s1_entity_coverage_pct": 63.67799129764863
+    },
+    {
+      "source": "S2",
+      "rule": "R06_strong_name",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 49058,
+      "pair_recall_pct": 27.64111290159002,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 39568,
+      "s1_entity_coverage_pct": 42.93449364684946
+    },
+    {
+      "source": "S2",
+      "rule": "R07_strong_address",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 67135,
+      "pair_recall_pct": 37.82637112495915,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 44962,
+      "s1_entity_coverage_pct": 48.787421738517125
+    },
+    {
+      "source": "S2",
+      "rule": "R08_strong_name_and_address",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 17241,
+      "pair_recall_pct": 9.714224541080222,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 15338,
+      "s1_entity_coverage_pct": 16.642975726733145
+    },
+    {
+      "source": "S2",
+      "rule": "R09_name_ge_0_70_and_address_ge_0_50",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 58562,
+      "pair_recall_pct": 32.99602213182182,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 44801,
+      "s1_entity_coverage_pct": 48.61272366236613
+    },
+    {
+      "source": "S2",
+      "rule": "R10_name_ge_0_80_and_address_ge_0_60",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 38207,
+      "pair_recall_pct": 21.527253467957312,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 31465,
+      "s1_entity_coverage_pct": 34.142080534728024
+    },
+    {
+      "source": "S2",
+      "rule": "R11_strong_name_plus_numeric",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 38220,
+      "pair_recall_pct": 21.53457815440439,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 31624,
+      "s1_entity_coverage_pct": 34.31460844844237
+    },
+    {
+      "source": "S2",
+      "rule": "R12_strong_address_plus_numeric",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 60348,
+      "pair_recall_pct": 34.002321362166306,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 40727,
+      "s1_entity_coverage_pct": 44.192102778893
+    },
+    {
+      "source": "S2",
+      "rule": "R13_strong_name_strong_address_or_numeric",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 39935,
+      "pair_recall_pct": 22.50087332799946,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 32984,
+      "s1_entity_coverage_pct": 35.790318905370064
+    },
+    {
+      "source": "S2",
+      "rule": "R14_name_address_numeric",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 50017,
+      "pair_recall_pct": 28.181449386416652,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 38782,
+      "s1_entity_coverage_pct": 42.081619809242724
+    },
+    {
+      "source": "S2",
+      "rule": "R15_name_containment_address",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 67740,
+      "pair_recall_pct": 38.1672507634577,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 48761,
+      "s1_entity_coverage_pct": 52.909645286949726
+    },
+    {
+      "source": "S2",
+      "rule": "R16_address_containment_name",
+      "total_true_pairs": 177482,
+      "covered_true_pairs": 55240,
+      "pair_recall_pct": 31.124283025884314,
+      "total_matched_s1_entities": 92159,
+      "s1_entities_with_coverage": 42661,
+      "s1_entity_coverage_pct": 46.29064985514166
+    },
+    {
+      "source": "S3",
+      "rule": "R01_exact_clean_name",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 41922,
+      "pair_recall_pct": 22.075248150390987,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 34879,
+      "s1_entity_coverage_pct": 37.44270179167606
+    },
+    {
+      "source": "S3",
+      "rule": "R02_exact_clean_address",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 8244,
+      "pair_recall_pct": 4.341117927384746,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 8234,
+      "s1_entity_coverage_pct": 8.839221495818707
+    },
+    {
+      "source": "S3",
+      "rule": "R03_exact_clean_name_and_address",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 2,
+      "pair_recall_pct": 0.0010531581580263815,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 2,
+      "s1_entity_coverage_pct": 0.0021470054641289063
+    },
+    {
+      "source": "S3",
+      "rule": "R04_numeric_overlap_ge_1",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 153023,
+      "pair_recall_pct": 80.5787104078355,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 80256,
+      "s1_entity_coverage_pct": 86.15503526456475
+    },
+    {
+      "source": "S3",
+      "rule": "R05_numeric_exact",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 118850,
+      "pair_recall_pct": 62.58392354071772,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 66018,
+      "s1_entity_coverage_pct": 70.87050336543108
+    },
+    {
+      "source": "S3",
+      "rule": "R06_strong_name",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 53329,
+      "pair_recall_pct": 28.081935704694455,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 42670,
+      "s1_entity_coverage_pct": 45.806361577190216
+    },
+    {
+      "source": "S3",
+      "rule": "R07_strong_address",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 30206,
+      "pair_recall_pct": 15.905847660672443,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 22548,
+      "s1_entity_coverage_pct": 24.205339602589287
+    },
+    {
+      "source": "S3",
+      "rule": "R08_strong_name_and_address",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 4267,
+      "pair_recall_pct": 2.246912930149285,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 3809,
+      "s1_entity_coverage_pct": 4.088971906433502
+    },
+    {
+      "source": "S3",
+      "rule": "R09_name_ge_0_70_and_address_ge_0_50",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 38655,
+      "pair_recall_pct": 20.35491429925489,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 31269,
+      "s1_entity_coverage_pct": 33.56735692892339
+    },
+    {
+      "source": "S3",
+      "rule": "R10_name_ge_0_80_and_address_ge_0_60",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 20591,
+      "pair_recall_pct": 10.84278981596061,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 17979,
+      "s1_entity_coverage_pct": 19.300505619786804
+    },
+    {
+      "source": "S3",
+      "rule": "R11_strong_name_plus_numeric",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 42255,
+      "pair_recall_pct": 22.25059898370238,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 34707,
+      "s1_entity_coverage_pct": 37.258059321760975
+    },
+    {
+      "source": "S3",
+      "rule": "R12_strong_address_plus_numeric",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 28537,
+      "pair_recall_pct": 15.026987177799425,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 21449,
+      "s1_entity_coverage_pct": 23.025560100050456
+    },
+    {
+      "source": "S3",
+      "rule": "R13_strong_name_strong_address_or_numeric",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 42562,
+      "pair_recall_pct": 22.41225876095943,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 34972,
+      "s1_entity_coverage_pct": 37.54253754575805
+    },
+    {
+      "source": "S3",
+      "rule": "R14_name_address_numeric",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 34759,
+      "pair_recall_pct": 18.3033622074195,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 28303,
+      "s1_entity_coverage_pct": 30.383347825620216
+    },
+    {
+      "source": "S3",
+      "rule": "R15_name_containment_address",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 45509,
+      "pair_recall_pct": 23.9640873068113,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 35414,
+      "s1_entity_coverage_pct": 38.01702575333054
+    },
+    {
+      "source": "S3",
+      "rule": "R16_address_containment_name",
+      "total_true_pairs": 189905,
+      "covered_true_pairs": 30992,
+      "pair_recall_pct": 16.31973881677681,
+      "total_matched_s1_entities": 93153,
+      "s1_entities_with_coverage": 25792,
+      "s1_entity_coverage_pct": 27.687782465406375
+    }
+  ],
+  "name_threshold_sweep": [
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.5,
+      "covered_pairs": 135561,
+      "pair_recall_pct": 76.38013995785488,
+      "covered_s1_entities": 78862,
+      "s1_entity_coverage_pct": 85.57167503987674
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.6,
+      "covered_pairs": 113452,
+      "pair_recall_pct": 63.92310206105408,
+      "covered_s1_entities": 71198,
+      "s1_entity_coverage_pct": 77.25561258260181
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.7,
+      "covered_pairs": 72135,
+      "pair_recall_pct": 40.643558219988506,
+      "covered_s1_entities": 52756,
+      "s1_entity_coverage_pct": 57.24454475417485
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.75,
+      "covered_pairs": 70999,
+      "pair_recall_pct": 40.003493311997836,
+      "covered_s1_entities": 52269,
+      "s1_entity_coverage_pct": 56.71611020084853
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.8,
+      "covered_pairs": 56566,
+      "pair_recall_pct": 31.8714010434861,
+      "covered_s1_entities": 44015,
+      "s1_entity_coverage_pct": 47.759849824759385
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.85,
+      "covered_pairs": 49058,
+      "pair_recall_pct": 27.64111290159002,
+      "covered_s1_entities": 39568,
+      "s1_entity_coverage_pct": 42.93449364684946
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.9,
+      "covered_pairs": 48732,
+      "pair_recall_pct": 27.457432302994107,
+      "covered_s1_entities": 39376,
+      "s1_entity_coverage_pct": 42.726158052930266
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 0.95,
+      "covered_pairs": 48720,
+      "pair_recall_pct": 27.450671053966037,
+      "covered_s1_entities": 39368,
+      "s1_entity_coverage_pct": 42.71747740318363
+    },
+    {
+      "source": "S2",
+      "name_jaccard_threshold": 1.0,
+      "covered_pairs": 48720,
+      "pair_recall_pct": 27.450671053966037,
+      "covered_s1_entities": 39368,
+      "s1_entity_coverage_pct": 42.71747740318363
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.5,
+      "covered_pairs": 148270,
+      "pair_recall_pct": 78.0758800452858,
+      "covered_s1_entities": 83317,
+      "s1_entity_coverage_pct": 89.44102712741405
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.6,
+      "covered_pairs": 121532,
+      "pair_recall_pct": 63.9962086306311,
+      "covered_s1_entities": 74921,
+      "s1_entity_coverage_pct": 80.42789818900089
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.7,
+      "covered_pairs": 75758,
+      "pair_recall_pct": 39.89257786788131,
+      "covered_s1_entities": 55260,
+      "s1_entity_coverage_pct": 59.32176097388167
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.75,
+      "covered_pairs": 74172,
+      "pair_recall_pct": 39.05742344856639,
+      "covered_s1_entities": 54619,
+      "s1_entity_coverage_pct": 58.63364572262837
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.8,
+      "covered_pairs": 60531,
+      "pair_recall_pct": 31.87435823174745,
+      "covered_s1_entities": 46922,
+      "s1_entity_coverage_pct": 50.37089519392827
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.85,
+      "covered_pairs": 53329,
+      "pair_recall_pct": 28.081935704694455,
+      "covered_s1_entities": 42670,
+      "s1_entity_coverage_pct": 45.806361577190216
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.9,
+      "covered_pairs": 52977,
+      "pair_recall_pct": 27.89657986888181,
+      "covered_s1_entities": 42465,
+      "s1_entity_coverage_pct": 45.586293517117
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 0.95,
+      "covered_pairs": 52968,
+      "pair_recall_pct": 27.89184065717069,
+      "covered_s1_entities": 42460,
+      "s1_entity_coverage_pct": 45.58092600345668
+    },
+    {
+      "source": "S3",
+      "name_jaccard_threshold": 1.0,
+      "covered_pairs": 52968,
+      "pair_recall_pct": 27.89184065717069,
+      "covered_s1_entities": 42460,
+      "s1_entity_coverage_pct": 45.58092600345668
+    }
+  ],
+  "address_threshold_sweep": [
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.3,
+      "covered_pairs": 165034,
+      "pair_recall_pct": 92.98633100821492,
+      "covered_s1_entities": 89104,
+      "s1_entity_coverage_pct": 96.68507687800431
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.4,
+      "covered_pairs": 156928,
+      "pair_recall_pct": 88.41910728975333,
+      "covered_s1_entities": 86248,
+      "s1_entity_coverage_pct": 93.58608491845615
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.5,
+      "covered_pairs": 144676,
+      "pair_recall_pct": 81.5158720320934,
+      "covered_s1_entities": 81587,
+      "s1_entity_coverage_pct": 88.52852135982378
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.6,
+      "covered_pairs": 122343,
+      "pair_recall_pct": 68.93262415343527,
+      "covered_s1_entities": 72148,
+      "s1_entity_coverage_pct": 78.28643974001453
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.7,
+      "covered_pairs": 94308,
+      "pair_recall_pct": 53.13665611160568,
+      "covered_s1_entities": 58949,
+      "s1_entity_coverage_pct": 63.96445273928754
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.8,
+      "covered_pairs": 67135,
+      "pair_recall_pct": 37.82637112495915,
+      "covered_s1_entities": 44962,
+      "s1_entity_coverage_pct": 48.787421738517125
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.85,
+      "covered_pairs": 52722,
+      "pair_recall_pct": 29.70554760482753,
+      "covered_s1_entities": 36875,
+      "s1_entity_coverage_pct": 40.012369925888954
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 0.9,
+      "covered_pairs": 43972,
+      "pair_recall_pct": 24.77547018852616,
+      "covered_s1_entities": 31552,
+      "s1_entity_coverage_pct": 34.23648260072266
+    },
+    {
+      "source": "S2",
+      "address_jaccard_threshold": 1.0,
+      "covered_pairs": 33931,
+      "pair_recall_pct": 19.11799506428821,
+      "covered_s1_entities": 25173,
+      "s1_entity_coverage_pct": 27.314749509000748
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.3,
+      "covered_pairs": 155704,
+      "pair_recall_pct": 81.99046891866986,
+      "covered_s1_entities": 83406,
+      "s1_entity_coverage_pct": 89.53656887056778
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.4,
+      "covered_pairs": 132826,
+      "pair_recall_pct": 69.94339274900608,
+      "covered_s1_entities": 74967,
+      "s1_entity_coverage_pct": 80.47727931467585
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.5,
+      "covered_pairs": 105881,
+      "pair_recall_pct": 55.75471946499566,
+      "covered_s1_entities": 63993,
+      "s1_entity_coverage_pct": 68.69666033300055
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.6,
+      "covered_pairs": 77881,
+      "pair_recall_pct": 41.01050525262631,
+      "covered_s1_entities": 50467,
+      "s1_entity_coverage_pct": 54.176462379096755
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.7,
+      "covered_pairs": 52011,
+      "pair_recall_pct": 27.38790447855507,
+      "covered_s1_entities": 35570,
+      "s1_entity_coverage_pct": 38.1844921795326
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.8,
+      "covered_pairs": 30206,
+      "pair_recall_pct": 15.905847660672443,
+      "covered_s1_entities": 22548,
+      "s1_entity_coverage_pct": 24.205339602589287
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.85,
+      "covered_pairs": 20691,
+      "pair_recall_pct": 10.895447723861931,
+      "covered_s1_entities": 17073,
+      "s1_entity_coverage_pct": 18.327912144536405
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 0.9,
+      "covered_pairs": 15140,
+      "pair_recall_pct": 7.972407256259709,
+      "covered_s1_entities": 13875,
+      "s1_entity_coverage_pct": 14.894850407394285
+    },
+    {
+      "source": "S3",
+      "address_jaccard_threshold": 1.0,
+      "covered_pairs": 12244,
+      "pair_recall_pct": 6.447434243437508,
+      "covered_s1_entities": 12219,
+      "s1_entity_coverage_pct": 13.117129883095553
+    }
+  ],
+  "numeric_overlap_sweep": [
+    {
+      "source": "S2",
+      "numeric_overlap_threshold": 1,
+      "covered_pairs": 140021,
+      "pair_recall_pct": 78.89307084662106,
+      "covered_s1_entities": 77530,
+      "s1_entity_coverage_pct": 84.12634685706225
+    },
+    {
+      "source": "S2",
+      "numeric_overlap_threshold": 2,
+      "covered_pairs": 43792,
+      "pair_recall_pct": 24.674051453105104,
+      "covered_s1_entities": 24515,
+      "s1_entity_coverage_pct": 26.600766067340142
+    },
+    {
+      "source": "S2",
+      "numeric_overlap_threshold": 3,
+      "covered_pairs": 14767,
+      "pair_recall_pct": 8.320280366459697,
+      "covered_s1_entities": 8285,
+      "s1_entity_coverage_pct": 8.989897893857355
+    },
+    {
+      "source": "S2",
+      "numeric_overlap_threshold": 4,
+      "covered_pairs": 5550,
+      "pair_recall_pct": 3.127077675482584,
+      "covered_s1_entities": 3156,
+      "s1_entity_coverage_pct": 3.42451632504693
+    },
+    {
+      "source": "S3",
+      "numeric_overlap_threshold": 1,
+      "covered_pairs": 153023,
+      "pair_recall_pct": 80.5787104078355,
+      "covered_s1_entities": 80256,
+      "s1_entity_coverage_pct": 86.15503526456475
+    },
+    {
+      "source": "S3",
+      "numeric_overlap_threshold": 2,
+      "covered_pairs": 51326,
+      "pair_recall_pct": 27.02719780943103,
+      "covered_s1_entities": 28562,
+      "s1_entity_coverage_pct": 30.66138503322491
+    },
+    {
+      "source": "S3",
+      "numeric_overlap_threshold": 3,
+      "covered_pairs": 14404,
+      "pair_recall_pct": 7.584845054106,
+      "covered_s1_entities": 8154,
+      "s1_entity_coverage_pct": 8.75334127725355
+    },
+    {
+      "source": "S3",
+      "numeric_overlap_threshold": 4,
+      "covered_pairs": 5025,
+      "pair_recall_pct": 2.646059872041284,
+      "covered_s1_entities": 2851,
+      "s1_entity_coverage_pct": 3.060556289115756
+    }
+  ],
+  "hybrid_coverage": [
+    {
+      "source": "S2",
+      "name_threshold": 0.7,
+      "address_threshold": 0.5,
+      "covered_pairs": 58562,
+      "pair_recall_pct": 32.99602213182182
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.7,
+      "address_threshold": 0.6,
+      "covered_pairs": 48977,
+      "pair_recall_pct": 27.595474470650544
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.7,
+      "address_threshold": 0.7,
+      "covered_pairs": 36754,
+      "pair_recall_pct": 20.708578898141784
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.7,
+      "address_threshold": 0.8,
+      "covered_pairs": 25607,
+      "pair_recall_pct": 14.42794198848334
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.8,
+      "address_threshold": 0.5,
+      "covered_pairs": 45835,
+      "pair_recall_pct": 25.825154100134096
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.8,
+      "address_threshold": 0.6,
+      "covered_pairs": 38207,
+      "pair_recall_pct": 21.527253467957312
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.8,
+      "address_threshold": 0.7,
+      "covered_pairs": 28660,
+      "pair_recall_pct": 16.148116428708263
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.8,
+      "address_threshold": 0.8,
+      "covered_pairs": 19841,
+      "pair_recall_pct": 11.179161830495486
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.85,
+      "address_threshold": 0.5,
+      "covered_pairs": 39805,
+      "pair_recall_pct": 22.427626463528696
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.85,
+      "address_threshold": 0.6,
+      "covered_pairs": 33157,
+      "pair_recall_pct": 18.681894501977666
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.85,
+      "address_threshold": 0.7,
+      "covered_pairs": 24858,
+      "pair_recall_pct": 14.005927361647942
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.85,
+      "address_threshold": 0.8,
+      "covered_pairs": 17241,
+      "pair_recall_pct": 9.714224541080222
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.9,
+      "address_threshold": 0.5,
+      "covered_pairs": 39565,
+      "pair_recall_pct": 22.292401482967286
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.9,
+      "address_threshold": 0.6,
+      "covered_pairs": 32958,
+      "pair_recall_pct": 18.569770455595496
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.9,
+      "address_threshold": 0.7,
+      "covered_pairs": 24711,
+      "pair_recall_pct": 13.92310206105408
+    },
+    {
+      "source": "S2",
+      "name_threshold": 0.9,
+      "address_threshold": 0.8,
+      "covered_pairs": 17157,
+      "pair_recall_pct": 9.666895797883729
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.7,
+      "address_threshold": 0.5,
+      "covered_pairs": 38655,
+      "pair_recall_pct": 20.35491429925489
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.7,
+      "address_threshold": 0.6,
+      "covered_pairs": 26248,
+      "pair_recall_pct": 13.821647665938233
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.7,
+      "address_threshold": 0.7,
+      "covered_pairs": 15303,
+      "pair_recall_pct": 8.05823964613886
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.7,
+      "address_threshold": 0.8,
+      "covered_pairs": 6714,
+      "pair_recall_pct": 3.535451936494563
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.8,
+      "address_threshold": 0.5,
+      "covered_pairs": 30702,
+      "pair_recall_pct": 16.167030883862985
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.8,
+      "address_threshold": 0.6,
+      "covered_pairs": 20591,
+      "pair_recall_pct": 10.84278981596061
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.8,
+      "address_threshold": 0.7,
+      "covered_pairs": 11761,
+      "pair_recall_pct": 6.193096548274137
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.8,
+      "address_threshold": 0.8,
+      "covered_pairs": 4879,
+      "pair_recall_pct": 2.569179326505358
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.85,
+      "address_threshold": 0.5,
+      "covered_pairs": 27043,
+      "pair_recall_pct": 14.24027803375372
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.85,
+      "address_threshold": 0.6,
+      "covered_pairs": 18121,
+      "pair_recall_pct": 9.54213949079803
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.85,
+      "address_threshold": 0.7,
+      "covered_pairs": 10339,
+      "pair_recall_pct": 5.444301097917379
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.85,
+      "address_threshold": 0.8,
+      "covered_pairs": 4267,
+      "pair_recall_pct": 2.246912930149285
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.9,
+      "address_threshold": 0.5,
+      "covered_pairs": 26869,
+      "pair_recall_pct": 14.148653274005424
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.9,
+      "address_threshold": 0.6,
+      "covered_pairs": 18022,
+      "pair_recall_pct": 9.490008161975725
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.9,
+      "address_threshold": 0.7,
+      "covered_pairs": 10292,
+      "pair_recall_pct": 5.419551881203759
+    },
+    {
+      "source": "S3",
+      "name_threshold": 0.9,
+      "address_threshold": 0.8,
+      "covered_pairs": 4257,
+      "pair_recall_pct": 2.241647139359153
+    }
+  ],
+  "multi_rule_union": [
+    {
+      "source": "S2",
+      "rule": "U01_exact_name_OR_address",
+      "covered_pairs": 55481,
+      "pair_recall_pct": 31.260071443864728,
+      "covered_s1_entities": 42475,
+      "s1_entity_coverage_pct": 46.088824748532424
+    },
+    {
+      "source": "S2",
+      "rule": "U02_exact_name_OR_address_OR_numeric",
+      "covered_pairs": 149383,
+      "pair_recall_pct": 84.16797196335402,
+      "covered_s1_entities": 82793,
+      "s1_entity_coverage_pct": 89.8371293091288
+    },
+    {
+      "source": "S2",
+      "rule": "U03_name_address_or_numeric",
+      "covered_pairs": 79983,
+      "pair_recall_pct": 45.06541508434658,
+      "covered_s1_entities": 56678,
+      "s1_entity_coverage_pct": 61.500233292461935
+    },
+    {
+      "source": "S2",
+      "rule": "U04_broad_structural_union",
+      "covered_pairs": 168392,
+      "pair_recall_pct": 94.87835386123663,
+      "covered_s1_entities": 89913,
+      "s1_entity_coverage_pct": 97.56290758363264
+    },
+    {
+      "source": "S3",
+      "rule": "U01_exact_name_OR_address",
+      "covered_pairs": 50164,
+      "pair_recall_pct": 26.415312919617705,
+      "covered_s1_entities": 40304,
+      "s1_entity_coverage_pct": 43.26645411312572
+    },
+    {
+      "source": "S3",
+      "rule": "U02_exact_name_OR_address_OR_numeric",
+      "covered_pairs": 162091,
+      "pair_recall_pct": 85.35372949632712,
+      "covered_s1_entities": 84800,
+      "s1_entity_coverage_pct": 91.03303167906563
+    },
+    {
+      "source": "S3",
+      "rule": "U03_name_address_or_numeric",
+      "covered_pairs": 71091,
+      "pair_recall_pct": 37.43503330612675,
+      "covered_s1_entities": 52644,
+      "s1_entity_coverage_pct": 56.51347782680107
+    },
+    {
+      "source": "S3",
+      "rule": "U04_broad_structural_union",
+      "covered_pairs": 175324,
+      "pair_recall_pct": 92.32195044890867,
+      "covered_s1_entities": 89624,
+      "s1_entity_coverage_pct": 96.21160885854454
+    }
+  ],
+  "recall_gap": [
+    {
+      "source": "S2",
+      "rule": "strong_name_and_address",
+      "total_true_pairs": 177482,
+      "covered_pairs": 17241,
+      "uncovered_pairs": 160241,
+      "covered_pct": 9.714224541080222,
+      "uncovered_pct": 90.28577545891979
+    },
+    {
+      "source": "S2",
+      "rule": "name_address_numeric",
+      "total_true_pairs": 177482,
+      "covered_pairs": 50017,
+      "uncovered_pairs": 127465,
+      "covered_pct": 28.181449386416652,
+      "uncovered_pct": 71.81855061358335
+    },
+    {
+      "source": "S2",
+      "rule": "exact_clean_name_or_address",
+      "total_true_pairs": 177482,
+      "covered_pairs": 55481,
+      "uncovered_pairs": 122001,
+      "covered_pct": 31.260071443864728,
+      "uncovered_pct": 68.73992855613527
+    },
+    {
+      "source": "S3",
+      "rule": "strong_name_and_address",
+      "total_true_pairs": 189905,
+      "covered_pairs": 4267,
+      "uncovered_pairs": 185638,
+      "covered_pct": 2.246912930149285,
+      "uncovered_pct": 97.75308706985072
+    },
+    {
+      "source": "S3",
+      "rule": "name_address_numeric",
+      "total_true_pairs": 189905,
+      "covered_pairs": 34759,
+      "uncovered_pairs": 155146,
+      "covered_pct": 18.3033622074195,
+      "uncovered_pct": 81.69663779258049
+    },
+    {
+      "source": "S3",
+      "rule": "exact_clean_name_or_address",
+      "total_true_pairs": 189905,
+      "covered_pairs": 50164,
+      "uncovered_pairs": 139741,
+      "covered_pct": 26.415312919617705,
+      "uncovered_pct": 73.5846870803823
+    }
+  ]
+}

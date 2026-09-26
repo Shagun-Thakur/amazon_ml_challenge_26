@@ -1,0 +1,83 @@
+{
+  "source": "source2",
+  "rows": 5034616,
+  "raw": {
+    "empty_name": 0,
+    "empty_name_pct": 0.0,
+    "empty_address": 168967,
+    "empty_address_pct": 3.3561050137686768,
+    "unique_name_fingerprint_count": 4402009,
+    "unique_address_fingerprint_count": 4337262,
+    "exact_record_fingerprint_unique_count": 5034616,
+    "duplicate_record_fingerprint_rows": 0,
+    "duplicate_record_pct": 0.0,
+    "name_length": {
+      "count": 5034616,
+      "mean": 25.103574930044317,
+      "std": 8.894691432912637,
+      "min": 2.0,
+      "max": 104.0
+    },
+    "address_length": {
+      "count": 5034616,
+      "mean": 46.22590858965212,
+      "std": 24.84466567430024,
+      "min": 0.0,
+      "max": 249.0
+    }
+  },
+  "clean": {
+    "empty_name": 0,
+    "empty_name_pct": 0.0,
+    "empty_address": 168967,
+    "empty_address_pct": 3.3561050137686768,
+    "unique_name_fingerprint_count": 4033290,
+    "unique_address_fingerprint_count": 4286084,
+    "exact_record_fingerprint_unique_count": 5034616,
+    "duplicate_record_fingerprint_rows": 0,
+    "duplicate_record_pct": 0.0,
+    "name_length": {
+      "count": 5034616,
+      "mean": 24.65013160884564,
+      "std": 8.799559529646276,
+      "min": 1.0,
+      "max": 106.0
+    },
+    "address_length": {
+      "count": 5034616,
+      "mean": 43.08765633764323,
+      "std": 23.287573405912422,
+      "min": 0.0,
+      "max": 231.0
+    },
+    "name_token_count": {
+      "count": 5034616,
+      "mean": 3.6473304021597674,
+      "std": 1.2451150785861942,
+      "min": 1.0,
+      "max": 18.0
+    },
+    "address_token_count": {
+      "count": 5034616,
+      "mean": 7.803719091982387,
+      "std": 4.09948304477741,
+      "min": 0.0,
+      "max": 46.0
+    },
+    "numeric_available": 4563675,
+    "numeric_available_pct": 90.64594002799817,
+    "postal_available": 1575897,
+    "postal_available_pct": 31.30123528785512
+  },
+  "transformation": {
+    "name_changed_rows": 4522966,
+    "name_changed_pct": 89.83735800307312,
+    "address_changed_rows": 4865649,
+    "address_changed_pct": 96.64389498623133
+  },
+  "country_distribution": {
+    "US": 3016817,
+    "India": 2017799
+  },
+  "runtime_seconds": 152.48139476776123
+}

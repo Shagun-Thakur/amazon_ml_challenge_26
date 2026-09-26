@@ -3,16 +3,25 @@ import re
 import sys
 import pandas as pd
 
-# Ensure local imports work reliably
-current_dir = os.path.dirname(os.path.abspath(__file__))
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# Ensure project root and src are on sys.path
+src_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_root = os.path.dirname(src_dir)
+for p in (project_root, src_dir):
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
-from text_normalizer import (
-    clean_base_text,
-    strip_legal_suffixes,
-    expand_address_abbreviations,
-)
+try:
+    from normalization.text_normalizer import (
+        clean_base_text,
+        strip_legal_suffixes,
+        expand_address_abbreviations,
+    )
+except ImportError:
+    from src.normalization.text_normalizer import (
+        clean_base_text,
+        strip_legal_suffixes,
+        expand_address_abbreviations,
+    )
 
 
 def extract_numeric_tokens(address: str) -> str:

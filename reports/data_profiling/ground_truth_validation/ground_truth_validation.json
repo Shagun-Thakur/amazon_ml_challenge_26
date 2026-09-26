@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-26T09:12:06.360310",
+    "cell": "Cell 9 — Ground Truth Validation",
+    "chunk_size": 100000,
+    "seed": 42,
+    "python_version": "3.12.13",
+    "pandas_version": "2.3.3",
+    "numpy_version": "2.0.2"
+  },
+  "files": {
+    "ground_truth": "/kaggle/input/datasets/srkreddy6115/amazon-ml-challenge-2026/student_resource/dataset/train/train_ground_truth.tsv",
+    "source1": "/kaggle/input/datasets/srkreddy6115/amazon-ml-challenge-2026/student_resource/dataset/train/train_source1.tsv",
+    "source2": "/kaggle/input/datasets/srkreddy6115/amazon-ml-challenge-2026/student_resource/dataset/train/train_source2.tsv",
+    "source3": "/kaggle/input/datasets/srkreddy6115/amazon-ml-challenge-2026/student_resource/dataset/train/train_source3.tsv"
+  },
+  "source_id_validation": {
+    "source1_rows": 2206821,
+    "source2_rows": 5034616,
+    "source3_rows": 5285603
+  },
+  "ground_truth": {
+    "rows": 2206821,
+    "unique_source1_ids": 2206821,
+    "empty_match_rows": 123247,
+    "nonempty_match_rows": 2083574,
+    "total_match_ids": 7638365,
+    "mean_cardinality": 3.4612526344456573,
+    "median_cardinality": 3.0,
+    "max_cardinality": 11,
+    "cardinality_distribution": [
+      {
+        "cardinality": 0,
+        "rows": 123247,
+        "pct": 5.584820880352326
+      },
+      {
+        "cardinality": 1,
+        "rows": 119157,
+        "pct": 5.399486410542586
+      },
+      {
+        "cardinality": 2,
+        "rows": 375212,
+        "pct": 17.002375815709566
+      },
+      {
+        "cardinality": 3,
+        "rows": 530841,
+        "pct": 24.05455630520101
+      },
+      {
+        "cardinality": 4,
+        "rows": 484115,
+        "pct": 21.937211944240154
+      },
+      {
+        "cardinality": 5,
+        "rows": 321957,
+        "pct": 14.589176013822598
+      },
+      {
+        "cardinality": 6,
+        "rows": 164868,
+        "pct": 7.470837009435745
+      },
+      {
+        "cardinality": 7,
+        "rows": 63968,
+        "pct": 2.8986492334448513
+      },
+      {
+        "cardinality": 8,
+        "rows": 18680,
+        "pct": 0.8464664782508413
+      },
+      {
+        "cardinality": 9,
+        "rows": 4205,
+        "pct": 0.19054558570903576
+      },
+      {
+        "cardinality": 10,
+        "rows": 534,
+        "pct": 0.024197703393252102
+      },
+      {
+        "cardinality": 11,
+        "rows": 37,
+        "pct": 0.0016766198980343217
+      }
+    ]
+  },
+  "duplicate_checks": {
+    "duplicate_gt_source1_rows": 0,
+    "rows_with_duplicate_matched_ids": 0,
+    "duplicate_matched_id_count": 0
+  },
+  "referential_integrity": {
+    "missing_source1_ids": 0,
+    "missing_matched_ids": 0,
+    "unique_s2_matched_ids": 3693619,
+    "unique_s3_matched_ids": 3944746
+  },
+  "format_validation": {
+    "malformed_source1_rows": 0,
+    "malformed_matched_id_count": 0
+  },
+  "topology": {
+    "s1_to_s2_only": 143029,
+    "s1_to_s3_only": 164498,
+    "s1_to_both": 1776047,
+    "s1_to_neither": 0
+  },
+  "diagnostic_examples": {
+    "malformed_examples": [],
+    "missing_s1_examples": [],
+    "missing_s2_examples": [],
+    "missing_s3_examples": []
+  }
+}

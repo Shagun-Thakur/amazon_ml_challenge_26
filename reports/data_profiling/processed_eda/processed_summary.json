@@ -1,0 +1,274 @@
+{
+  "cell": "10",
+  "title": "Processed EDA",
+  "version": "V1",
+  "seed": 42,
+  "chunk_size": 100000,
+  "sources": {
+    "source1": {
+      "source": "source1",
+      "rows": 2206821,
+      "raw": {
+        "empty_name": 0,
+        "empty_name_pct": 0.0,
+        "empty_address": 0,
+        "empty_address_pct": 0.0,
+        "unique_name_fingerprint_count": 1539229,
+        "unique_address_fingerprint_count": 2130606,
+        "exact_record_fingerprint_unique_count": 2206821,
+        "duplicate_record_fingerprint_rows": 0,
+        "duplicate_record_pct": 0.0,
+        "name_length": {
+          "count": 2206821,
+          "mean": 24.03440333402664,
+          "std": 7.740530878949385,
+          "min": 3.0,
+          "max": 105.0
+        },
+        "address_length": {
+          "count": 2206821,
+          "mean": 52.06621289175697,
+          "std": 25.329718602877556,
+          "min": 11.0,
+          "max": 256.0
+        }
+      },
+      "clean": {
+        "empty_name": 0,
+        "empty_name_pct": 0.0,
+        "empty_address": 0,
+        "empty_address_pct": 0.0,
+        "unique_name_fingerprint_count": 1522166,
+        "unique_address_fingerprint_count": 2130153,
+        "exact_record_fingerprint_unique_count": 2206821,
+        "duplicate_record_fingerprint_rows": 0,
+        "duplicate_record_pct": 0.0,
+        "name_length": {
+          "count": 2206821,
+          "mean": 23.905208895510782,
+          "std": 7.686867819263678,
+          "min": 3.0,
+          "max": 105.0
+        },
+        "address_length": {
+          "count": 2206821,
+          "mean": 48.68469803395926,
+          "std": 23.620153430827564,
+          "min": 10.0,
+          "max": 240.0
+        },
+        "name_token_count": {
+          "count": 2206821,
+          "mean": 3.624692260949121,
+          "std": 1.0434719817949167,
+          "min": 1.0,
+          "max": 19.0
+        },
+        "address_token_count": {
+          "count": 2206821,
+          "mean": 8.512306163481316,
+          "std": 4.056379199588256,
+          "min": 2.0,
+          "max": 46.0
+        },
+        "numeric_available": 2129784,
+        "numeric_available_pct": 96.50914143013864,
+        "postal_available": 807372,
+        "postal_available_pct": 36.585296224750444
+      },
+      "transformation": {
+        "name_changed_rows": 2206821,
+        "name_changed_pct": 100.0,
+        "address_changed_rows": 2206821,
+        "address_changed_pct": 100.0
+      },
+      "country_distribution": {
+        "US": 1323633,
+        "India": 883188
+      },
+      "runtime_seconds": 65.04768872261047
+    },
+    "source2": {
+      "source": "source2",
+      "rows": 5034616,
+      "raw": {
+        "empty_name": 0,
+        "empty_name_pct": 0.0,
+        "empty_address": 168967,
+        "empty_address_pct": 3.3561050137686768,
+        "unique_name_fingerprint_count": 4402009,
+        "unique_address_fingerprint_count": 4337262,
+        "exact_record_fingerprint_unique_count": 5034616,
+        "duplicate_record_fingerprint_rows": 0,
+        "duplicate_record_pct": 0.0,
+        "name_length": {
+          "count": 5034616,
+          "mean": 25.103574930044317,
+          "std": 8.894691432912637,
+          "min": 2.0,
+          "max": 104.0
+        },
+        "address_length": {
+          "count": 5034616,
+          "mean": 46.22590858965212,
+          "std": 24.84466567430024,
+          "min": 0.0,
+          "max": 249.0
+        }
+      },
+      "clean": {
+        "empty_name": 0,
+        "empty_name_pct": 0.0,
+        "empty_address": 168967,
+        "empty_address_pct": 3.3561050137686768,
+        "unique_name_fingerprint_count": 4033290,
+        "unique_address_fingerprint_count": 4286084,
+        "exact_record_fingerprint_unique_count": 5034616,
+        "duplicate_record_fingerprint_rows": 0,
+        "duplicate_record_pct": 0.0,
+        "name_length": {
+          "count": 5034616,
+          "mean": 24.65013160884564,
+          "std": 8.799559529646276,
+          "min": 1.0,
+          "max": 106.0
+        },
+        "address_length": {
+          "count": 5034616,
+          "mean": 43.08765633764323,
+          "std": 23.287573405912422,
+          "min": 0.0,
+          "max": 231.0
+        },
+        "name_token_count": {
+          "count": 5034616,
+          "mean": 3.6473304021597674,
+          "std": 1.2451150785861942,
+          "min": 1.0,
+          "max": 18.0
+        },
+        "address_token_count": {
+          "count": 5034616,
+          "mean": 7.803719091982387,
+          "std": 4.09948304477741,
+          "min": 0.0,
+          "max": 46.0
+        },
+        "numeric_available": 4563675,
+        "numeric_available_pct": 90.64594002799817,
+        "postal_available": 1575897,
+        "postal_available_pct": 31.30123528785512
+      },
+      "transformation": {
+        "name_changed_rows": 4522966,
+        "name_changed_pct": 89.83735800307312,
+        "address_changed_rows": 4865649,
+        "address_changed_pct": 96.64389498623133
+      },
+      "country_distribution": {
+        "US": 3016817,
+        "India": 2017799
+      },
+      "runtime_seconds": 152.48139476776123
+    },
+    "source3": {
+      "source": "source3",
+      "rows": 5285603,
+      "raw": {
+        "empty_name": 0,
+        "empty_name_pct": 0.0,
+        "empty_address": 175916,
+        "empty_address_pct": 3.3282106128666875,
+        "unique_name_fingerprint_count": 4651609,
+        "unique_address_fingerprint_count": 4632765,
+        "exact_record_fingerprint_unique_count": 5285603,
+        "duplicate_record_fingerprint_rows": 0,
+        "duplicate_record_pct": 0.0,
+        "name_length": {
+          "count": 5285603,
+          "mean": 25.202143823514554,
+          "std": 9.49362183267867,
+          "min": 2.0,
+          "max": 123.0
+        },
+        "address_length": {
+          "count": 5285603,
+          "mean": 46.71443731207206,
+          "std": 21.64981112406078,
+          "min": 0.0,
+          "max": 240.0
+        }
+      },
+      "clean": {
+        "empty_name": 0,
+        "empty_name_pct": 0.0,
+        "empty_address": 175916,
+        "empty_address_pct": 3.3282106128666875,
+        "unique_name_fingerprint_count": 4288741,
+        "unique_address_fingerprint_count": 4616084,
+        "exact_record_fingerprint_unique_count": 5285603,
+        "duplicate_record_fingerprint_rows": 0,
+        "duplicate_record_pct": 0.0,
+        "name_length": {
+          "count": 5285603,
+          "mean": 24.74873235844614,
+          "std": 9.388898423294846,
+          "min": 1.0,
+          "max": 123.0
+        },
+        "address_length": {
+          "count": 5285603,
+          "mean": 43.57488615773829,
+          "std": 20.241927051466117,
+          "min": 0.0,
+          "max": 227.0
+        },
+        "name_token_count": {
+          "count": 5285603,
+          "mean": 3.6967371556282225,
+          "std": 1.3884898020801344,
+          "min": 1.0,
+          "max": 21.0
+        },
+        "address_token_count": {
+          "count": 5285603,
+          "mean": 7.642938185103951,
+          "std": 3.8568026938651405,
+          "min": 0.0,
+          "max": 48.0
+        },
+        "numeric_available": 4799297,
+        "numeric_available_pct": 90.79942250676034,
+        "postal_available": 1672105,
+        "postal_available_pct": 31.635084965707794
+      },
+      "transformation": {
+        "name_changed_rows": 4941527,
+        "name_changed_pct": 93.49031699883628,
+        "address_changed_rows": 5109687,
+        "address_changed_pct": 96.67178938713332
+      },
+      "country_distribution": {
+        "US": 3170056,
+        "India": 2115547
+      },
+      "runtime_seconds": 157.4687659740448
+    }
+  },
+  "files": {
+    "summary_csv": "/kaggle/working/reports/processed_eda/csv/processed_eda_summary.csv",
+    "country_csv": "/kaggle/working/reports/processed_eda/csv/processed_country_distribution.csv",
+    "distribution_csv": "/kaggle/working/reports/processed_eda/csv/processed_length_token_statistics.csv",
+    "raw_vs_clean_csv": "/kaggle/working/reports/processed_eda/csv/raw_vs_clean_changes.csv",
+    "plot_directory": "/kaggle/working/reports/processed_eda/plots"
+  },
+  "notes": [
+    "Processed EDA used chunked TSV reads.",
+    "Large Python sets were avoided.",
+    "Uniqueness and duplicate analysis uses uint64 pandas fingerprints.",
+    "Fingerprint collision probability is negligible for this EDA use case.",
+    "Raw datasets were not modified.",
+    "Cleaned datasets were not modified."
+  ],
+  "runtime_seconds": 381.6755311489105
+}

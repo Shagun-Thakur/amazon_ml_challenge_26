@@ -1,0 +1,157 @@
+{
+  "cell": "Cell 7",
+  "status": "PASS",
+  "sample_size_per_source_target": 50000,
+  "sources": {
+    "source1": 50000,
+    "source2": 50000,
+    "source3": 50000
+  },
+  "design_version": "cleaning_v1",
+  "rules": [
+    {
+      "rule_id": "N01",
+      "field": "business_name",
+      "transformation": "Unicode NFKC normalization",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Conservative Unicode canonicalization without script loss."
+    },
+    {
+      "rule_id": "N02",
+      "field": "business_name",
+      "transformation": "Lowercase",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Removes case-only variation."
+    },
+    {
+      "rule_id": "N03",
+      "field": "business_name",
+      "transformation": "Normalize ampersand to 'and'",
+      "decision": "KEEP",
+      "risk": "LOW-MEDIUM",
+      "reason": "Handles common business-name formatting variation while preserving meaning."
+    },
+    {
+      "rule_id": "N04",
+      "field": "business_name",
+      "transformation": "Replace punctuation with spaces",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Addresses punctuation variation while retaining token boundaries."
+    },
+    {
+      "rule_id": "N05",
+      "field": "business_name",
+      "transformation": "Whitespace normalization",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Removes repeated/leading/trailing whitespace variation."
+    },
+    {
+      "rule_id": "N06",
+      "field": "business_name",
+      "transformation": "Remove legal suffixes",
+      "decision": "HOLD_FOR_EVIDENCE",
+      "risk": "MEDIUM-HIGH",
+      "reason": "Can improve equivalence but may collapse distinct businesses sharing a base name."
+    },
+    {
+      "rule_id": "A01",
+      "field": "business_address",
+      "transformation": "Unicode NFKC normalization",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Conservative Unicode canonicalization."
+    },
+    {
+      "rule_id": "A02",
+      "field": "business_address",
+      "transformation": "Lowercase",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Removes case variation."
+    },
+    {
+      "rule_id": "A03",
+      "field": "business_address",
+      "transformation": "Normalize ampersand",
+      "decision": "KEEP",
+      "risk": "LOW-MEDIUM",
+      "reason": "Common formatting variation."
+    },
+    {
+      "rule_id": "A04",
+      "field": "business_address",
+      "transformation": "Punctuation normalization",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Useful for punctuation differences while preserving tokens."
+    },
+    {
+      "rule_id": "A05",
+      "field": "business_address",
+      "transformation": "Whitespace normalization",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Removes formatting-only variation."
+    },
+    {
+      "rule_id": "A06",
+      "field": "business_address",
+      "transformation": "Numeric-token extraction",
+      "decision": "KEEP_AS_FEATURE",
+      "risk": "LOW",
+      "reason": "Hard-negative analysis shows strong separation for address numeric structure."
+    },
+    {
+      "rule_id": "A07",
+      "field": "business_address",
+      "transformation": "Postal/ZIP extraction",
+      "decision": "KEEP_AS_FEATURE",
+      "risk": "LOW-MEDIUM",
+      "reason": "Structural location signal; should remain separate from lexical address text."
+    },
+    {
+      "rule_id": "A08",
+      "field": "business_address",
+      "transformation": "Aggressive abbreviation expansion",
+      "decision": "HOLD_FOR_EVIDENCE",
+      "risk": "MEDIUM",
+      "reason": "Potentially useful but must be validated against collisions and true-match coverage."
+    },
+    {
+      "rule_id": "A09",
+      "field": "business_address",
+      "transformation": "Aggressive transliteration",
+      "decision": "DO_NOT_USE_V1",
+      "risk": "HIGH",
+      "reason": "Could destroy script-specific information and create collisions."
+    },
+    {
+      "rule_id": "A10",
+      "field": "business_address",
+      "transformation": "Semantic address rewriting",
+      "decision": "DO_NOT_USE_V1",
+      "risk": "HIGH",
+      "reason": "Too aggressive before evidence demonstrates benefit."
+    },
+    {
+      "rule_id": "C01",
+      "field": "composite",
+      "transformation": "clean_name + clean_address",
+      "decision": "KEEP",
+      "risk": "LOW",
+      "reason": "Preserves joint entity evidence for retrieval and reranking."
+    }
+  ],
+  "reports": {
+    "transformation_audit": "/kaggle/working/reports/cleaning_design/transformation_audit.csv",
+    "transformation_examples": "/kaggle/working/reports/cleaning_design/transformation_examples.csv",
+    "numeric_structural_audit": "/kaggle/working/reports/cleaning_design/numeric_structural_audit.csv",
+    "collision_audit": "/kaggle/working/reports/cleaning_design/collision_audit.csv",
+    "risky_transformation_audit": "/kaggle/working/reports/cleaning_design/risky_transformation_audit.csv",
+    "cleaning_design": "/kaggle/working/reports/cleaning_design/cleaning_design_v1.csv"
+  }
+}

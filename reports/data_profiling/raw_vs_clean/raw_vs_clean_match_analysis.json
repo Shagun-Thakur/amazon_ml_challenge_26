@@ -1,0 +1,169 @@
+{
+  "analysis": "raw_vs_clean_match_analysis",
+  "version": "v1",
+  "seed": 42,
+  "positive_s1_sample": 100000,
+  "chunk_size": 100000,
+  "results": {
+    "S2": {
+      "source": "S2",
+      "positive_s1_sample": 100000,
+      "positive_pairs_analyzed": 177482,
+      "raw_name_exact_count": 8470,
+      "clean_name_exact_count": 38038,
+      "raw_address_exact_count": 0,
+      "clean_address_exact_count": 22188,
+      "raw_name_address_exact_count": 0,
+      "clean_name_address_exact_count": 4745,
+      "raw_name_exact_pct": 4.7723149389797275,
+      "clean_name_exact_pct": 21.432032544145322,
+      "raw_address_exact_pct": 0.0,
+      "clean_address_exact_pct": 12.501549452902266,
+      "raw_name_address_exact_pct": 0.0,
+      "clean_name_address_exact_pct": 2.673510553182858,
+      "name_exact_gain_percentage_points": 16.659717605165596,
+      "address_exact_gain_percentage_points": 12.501549452902266,
+      "name_address_exact_gain_percentage_points": 2.673510553182858,
+      "mean_name_token_jaccard": 0.6104260539365225,
+      "median_name_token_jaccard": 0.6666666666666666,
+      "mean_address_token_jaccard": 0.6868644316195965,
+      "median_address_token_jaccard": 0.7142857142857143,
+      "mean_name_token_containment": 0.7384637861290423,
+      "mean_address_token_containment": 0.8297993240801305,
+      "mean_numeric_overlap": 1.1653238074847028,
+      "median_numeric_overlap": 1.0,
+      "numeric_overlap_nonzero_pct": 78.89307084662106,
+      "numeric_exact_pct": 58.35746723611408
+    },
+    "S3": {
+      "source": "S3",
+      "positive_s1_sample": 100000,
+      "positive_pairs_analyzed": 189905,
+      "raw_name_exact_count": 8665,
+      "clean_name_exact_count": 41922,
+      "raw_address_exact_count": 8231,
+      "clean_address_exact_count": 8244,
+      "raw_name_address_exact_count": 1,
+      "clean_name_address_exact_count": 2,
+      "raw_name_exact_pct": 4.562807719649299,
+      "clean_name_exact_pct": 22.075248150390987,
+      "raw_address_exact_pct": 4.334272399357573,
+      "clean_address_exact_pct": 4.341117927384746,
+      "raw_name_address_exact_pct": 0.0005265790790131907,
+      "clean_name_address_exact_pct": 0.0010531581580263815,
+      "name_exact_gain_percentage_points": 17.512440430741687,
+      "address_exact_gain_percentage_points": 0.006845528027172421,
+      "name_address_exact_gain_percentage_points": 0.0005265790790131907,
+      "mean_name_token_jaccard": 0.6246131373460826,
+      "median_name_token_jaccard": 0.6666666666666666,
+      "mean_address_token_jaccard": 0.5288948182482808,
+      "median_address_token_jaccard": 0.5,
+      "mean_name_token_containment": 0.7724742507199525,
+      "mean_address_token_containment": 0.7060574792043193,
+      "mean_numeric_overlap": 1.191253521497591,
+      "median_numeric_overlap": 1.0,
+      "numeric_overlap_nonzero_pct": 80.5787104078355,
+      "numeric_exact_pct": 62.58392354071772
+    }
+  },
+  "ambiguity": [
+    {
+      "source": "S1",
+      "feature": "name",
+      "raw_unique": 1539229,
+      "clean_unique": 1522166,
+      "raw_duplicate_rows": 667592,
+      "clean_duplicate_rows": 684655,
+      "raw_duplicate_row_pct": 30.251298134284564,
+      "clean_duplicate_row_pct": 31.02449179158618,
+      "duplicate_row_pct_change": 0.7731936573016149
+    },
+    {
+      "source": "S1",
+      "feature": "address",
+      "raw_unique": 2130606,
+      "clean_unique": 2130153,
+      "raw_duplicate_rows": 76215,
+      "clean_duplicate_rows": 76668,
+      "raw_duplicate_row_pct": 3.453610419694212,
+      "clean_duplicate_row_pct": 3.4741376849323076,
+      "duplicate_row_pct_change": 0.02052726523809545
+    },
+    {
+      "source": "S2",
+      "feature": "name",
+      "raw_unique": 4402009,
+      "clean_unique": 4033290,
+      "raw_duplicate_rows": 632607,
+      "clean_duplicate_rows": 1001326,
+      "raw_duplicate_row_pct": 12.565148960715177,
+      "clean_duplicate_row_pct": 19.888825682038114,
+      "duplicate_row_pct_change": 7.323676721322936
+    },
+    {
+      "source": "S2",
+      "feature": "address",
+      "raw_unique": 4337262,
+      "clean_unique": 4286084,
+      "raw_duplicate_rows": 697354,
+      "clean_duplicate_rows": 748532,
+      "raw_duplicate_row_pct": 13.85118547273516,
+      "clean_duplicate_row_pct": 14.867707884772146,
+      "duplicate_row_pct_change": 1.016522412036986
+    },
+    {
+      "source": "S3",
+      "feature": "name",
+      "raw_unique": 4651609,
+      "clean_unique": 4288741,
+      "raw_duplicate_rows": 633994,
+      "clean_duplicate_rows": 996862,
+      "raw_duplicate_row_pct": 11.994733618851058,
+      "clean_duplicate_row_pct": 18.859948429725048,
+      "duplicate_row_pct_change": 6.86521481087399
+    },
+    {
+      "source": "S3",
+      "feature": "address",
+      "raw_unique": 4632765,
+      "clean_unique": 4616084,
+      "raw_duplicate_rows": 652838,
+      "clean_duplicate_rows": 669519,
+      "raw_duplicate_row_pct": 12.351249233058176,
+      "clean_duplicate_row_pct": 12.666842364059502,
+      "duplicate_row_pct_change": 0.31559313100132513
+    }
+  ],
+  "clean_name_address_ambiguity": [
+    {
+      "source": "S1",
+      "feature": "clean_name_plus_clean_address",
+      "rows": 2206821,
+      "unique": 2206821,
+      "duplicate_rows": 0,
+      "duplicate_row_pct": 0.0
+    },
+    {
+      "source": "S2",
+      "feature": "clean_name_plus_clean_address",
+      "rows": 5034616,
+      "unique": 4967478,
+      "duplicate_rows": 67138,
+      "duplicate_row_pct": 1.3335277208827843
+    },
+    {
+      "source": "S3",
+      "feature": "clean_name_plus_clean_address",
+      "rows": 5285603,
+      "unique": 5235611,
+      "duplicate_rows": 49992,
+      "duplicate_row_pct": 0.9458145078243675
+    }
+  ],
+  "files": {
+    "exact_match_comparison": "/kaggle/working/reports/raw_vs_clean/csv/raw_vs_clean_exact_match_comparison.csv",
+    "token_numeric_signals": "/kaggle/working/reports/raw_vs_clean/csv/raw_vs_clean_token_numeric_signals.csv",
+    "ambiguity": "/kaggle/working/reports/raw_vs_clean/csv/raw_vs_clean_ambiguity.csv",
+    "clean_name_address_ambiguity": "/kaggle/working/reports/raw_vs_clean/csv/clean_name_address_ambiguity.csv"
+  }
+}

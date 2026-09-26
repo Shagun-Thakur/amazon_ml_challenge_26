@@ -15,9 +15,11 @@ def resolve_project_paths():
         while True:
             # Check for project markers
             if (
-                os.path.exists(os.path.join(curr, "AGENT.md"))
+                os.path.exists(os.path.join(curr, "REPOSITORY_MAP.md"))
+                or os.path.exists(os.path.join(curr, "AGENT.md"))
                 or os.path.exists(os.path.join(curr, "student_resource"))
                 or os.path.exists(os.path.join(curr, "data_cleaned"))
+                or (os.path.exists(os.path.join(curr, "src")) and os.path.exists(os.path.join(curr, "data")))
             ):
                 project_root = curr
                 break
@@ -33,6 +35,7 @@ def resolve_project_paths():
 
     # Search for dataset train and test directories
     possible_dataset_roots = [
+        os.path.join(project_root, "data", "raw"),
         os.path.join(project_root, "student_resource", "dataset"),
         os.path.join(project_root, "dataset"),
     ]
@@ -63,9 +66,10 @@ def resolve_project_paths():
             f"Could not locate train_source1.tsv starting from {project_root}."
         )
 
-    cleaned_dir = os.path.join(project_root, "data_cleaned")
-    reports_dir = os.path.join(project_root, "reports")
-    code_dir = os.path.join(project_root, "business_entity_resolution", "code", "src")
+    # Cleaned data in permanent architecture resides in data/processed
+    cleaned_dir = os.path.join(project_root, "data", "processed")
+    reports_dir = os.path.join(project_root, "reports", "data_profiling")
+    code_dir = os.path.join(project_root, "src")
 
     return {
         "project_root": project_root,

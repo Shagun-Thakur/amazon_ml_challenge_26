@@ -4,15 +4,23 @@ import os
 import sys
 import time
 
-# Ensure local modules can be imported
-current_dir = os.path.dirname(os.path.abspath(__file__))
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# Ensure project root and src are on sys.path
+src_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_root = os.path.dirname(src_dir)
+for p in (project_root, src_dir):
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
-from utils_io import resolve_project_paths, load_tsv_safe, save_tsv_safe
-from audits import audit_schema_and_quality, audit_ground_truth_schema
-from structural_features import transform_dataframe
-from gt_profiler import audit_ground_truth
+try:
+    from utils.utils_io import resolve_project_paths, load_tsv_safe, save_tsv_safe
+    from data.audits import audit_schema_and_quality, audit_ground_truth_schema
+    from features.structural_features import transform_dataframe
+    from evaluation.gt_profiler import audit_ground_truth
+except ImportError:
+    from src.utils.utils_io import resolve_project_paths, load_tsv_safe, save_tsv_safe
+    from src.data.audits import audit_schema_and_quality, audit_ground_truth_schema
+    from src.features.structural_features import transform_dataframe
+    from src.evaluation.gt_profiler import audit_ground_truth
 
 
 def safe_link_or_copy(src_path: str, dst_path: str) -> None:
