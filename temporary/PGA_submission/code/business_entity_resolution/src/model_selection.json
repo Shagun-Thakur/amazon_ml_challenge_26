@@ -1,0 +1,11 @@
+{
+  "selected_model": "XGBoost",
+  "selected_threshold": 0.8400000000000005,
+  "metrics": {
+    "macro_f05": 0.9699537739045292,
+    "precision": 0.9827996598639457,
+    "recall": 0.9483882426303855,
+    "singleton_accuracy": 0.8565066798614547,
+    "mean_predicted_cardinality": 3.2682
+  }
+}

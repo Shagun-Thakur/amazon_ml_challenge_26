@@ -1,0 +1,49 @@
+{
+  "selected_model": "XGBoost",
+  "selected_threshold": 0.8400000000000005,
+  "model_binary": "matcher_xgboost.json",
+  "feature_count": 25,
+  "feature_names": [
+    "name_levenshtein_similarity",
+    "name_jaro_winkler",
+    "name_token_sort_ratio",
+    "name_token_set_ratio",
+    "name_token_jaccard",
+    "name_containment",
+    "name_length_ratio",
+    "addr_token_jaccard",
+    "addr_containment",
+    "addr_levenshtein_similarity",
+    "addr_length_ratio",
+    "addr_exact",
+    "numeric_overlap_count",
+    "numeric_jaccard",
+    "numeric_exact_match",
+    "numeric_conflict",
+    "s1_missing_address",
+    "target_missing_address",
+    "both_missing_address",
+    "same_country",
+    "target_source",
+    "candidate_rank",
+    "normalized_candidate_rank",
+    "reciprocal_candidate_rank",
+    "candidate_count_for_s1"
+  ],
+  "candidate_generation_source": "Generator A (all-MiniLM-L6-v2 MNRL dense retrieval + FAISS ANN)",
+  "candidate_artifact": "candidate_pairs.tsv",
+  "training_specification": {
+    "s1_pool_sample": 35000,
+    "k_candidates": 25,
+    "cv_method": "GroupKFold(n_splits=3, group=source1_entity_id)",
+    "negative_downsampling": "7:1 in-fold only",
+    "optimization_metric": "Exact Per-Entity Macro-F0.5 (with singleton preservation)"
+  },
+  "measured_validation_metrics": {
+    "macro_f05": 0.9699537739045292,
+    "precision": 0.9827996598639457,
+    "recall": 0.9483882426303855,
+    "singleton_accuracy": 0.8565066798614547,
+    "mean_predicted_cardinality": 3.2682
+  }
+}

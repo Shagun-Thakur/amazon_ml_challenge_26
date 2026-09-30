@@ -1,0 +1,6 @@
+ML Challenge 2026 — submission validator
+  test dir: dataset/test
+
+FAIL — 1 issue(s) to fix before submitting:
+  1. Test source1 file not found: dataset/test/test_source1.tsv (check --test-dir).
+

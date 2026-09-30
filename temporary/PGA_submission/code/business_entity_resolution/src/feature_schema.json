@@ -1,0 +1,130 @@
+{
+  "feature_count": 25,
+  "features": [
+    {
+      "name": "name_levenshtein_similarity",
+      "dtype": "float32",
+      "index": 0
+    },
+    {
+      "name": "name_jaro_winkler",
+      "dtype": "float32",
+      "index": 1
+    },
+    {
+      "name": "name_token_sort_ratio",
+      "dtype": "float32",
+      "index": 2
+    },
+    {
+      "name": "name_token_set_ratio",
+      "dtype": "float32",
+      "index": 3
+    },
+    {
+      "name": "name_token_jaccard",
+      "dtype": "float32",
+      "index": 4
+    },
+    {
+      "name": "name_containment",
+      "dtype": "float32",
+      "index": 5
+    },
+    {
+      "name": "name_length_ratio",
+      "dtype": "float32",
+      "index": 6
+    },
+    {
+      "name": "addr_token_jaccard",
+      "dtype": "float32",
+      "index": 7
+    },
+    {
+      "name": "addr_containment",
+      "dtype": "float32",
+      "index": 8
+    },
+    {
+      "name": "addr_levenshtein_similarity",
+      "dtype": "float32",
+      "index": 9
+    },
+    {
+      "name": "addr_length_ratio",
+      "dtype": "float32",
+      "index": 10
+    },
+    {
+      "name": "addr_exact",
+      "dtype": "float32",
+      "index": 11
+    },
+    {
+      "name": "numeric_overlap_count",
+      "dtype": "float32",
+      "index": 12
+    },
+    {
+      "name": "numeric_jaccard",
+      "dtype": "float32",
+      "index": 13
+    },
+    {
+      "name": "numeric_exact_match",
+      "dtype": "float32",
+      "index": 14
+    },
+    {
+      "name": "numeric_conflict",
+      "dtype": "float32",
+      "index": 15
+    },
+    {
+      "name": "s1_missing_address",
+      "dtype": "float32",
+      "index": 16
+    },
+    {
+      "name": "target_missing_address",
+      "dtype": "float32",
+      "index": 17
+    },
+    {
+      "name": "both_missing_address",
+      "dtype": "float32",
+      "index": 18
+    },
+    {
+      "name": "same_country",
+      "dtype": "float32",
+      "index": 19
+    },
+    {
+      "name": "target_source",
+      "dtype": "float32",
+      "index": 20
+    },
+    {
+      "name": "candidate_rank",
+      "dtype": "float32",
+      "index": 21
+    },
+    {
+      "name": "normalized_candidate_rank",
+      "dtype": "float32",
+      "index": 22
+    },
+    {
+      "name": "reciprocal_candidate_rank",
+      "dtype": "float32",
+      "index": 23
+    },
+    {
+      "name": "candidate_count_for_s1",
+      "dtype": "float32",
+      "index": 24
+    }
+  ]
+}

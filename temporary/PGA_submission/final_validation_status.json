@@ -1,0 +1,10 @@
+{
+  "internal_integrity_passed": true,
+  "official_validator_found": true,
+  "official_validator_passed": false,
+  "official_validator_log": "/kaggle/working/PGA_matcher_results/official_validation.txt",
+  "total_queries": 1732544,
+  "empty_predictions": 212031,
+  "subset_violations": 0,
+  "duplicate_matches": 0
+}
