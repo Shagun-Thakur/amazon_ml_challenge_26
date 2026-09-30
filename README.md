@@ -31,11 +31,15 @@ amazon-ml-2026/
 ├── .gitignore                         # Hardened git ignore (excludes raw data & weights)
 ├── CONTRIBUTING.md                    # Engineering guidelines & PR workflows
 ├── REPOSITORY_MAP.md                  # Comprehensive mapping of all directories and files
+├── repository_audit.md                # Repository audit and file inventory
+├── repository_migration_notes.md      # Operational migration and path notes
 │
 ├── docs/                              # Problem statement, strategies, and notes
+│   ├── README.md                      # Guide to all project documentation
 │   ├── problem_statement.md           # Official challenge statement & rules
+│   ├── comprehensive_eda_report.md    # Consolidated post-competition & deep EDA analysis
 │   ├── strategy/                      # Technical roadmaps and architectural plans
-│   ├── analysis/                      # In-depth EDA and error investigations
+│   ├── analysis/                      # In-depth EDA, blocking, and error investigations
 │   └── submission/                    # Methodology and operational submission notes
 │
 ├── data/                              # Data governance & specifications
@@ -45,15 +49,11 @@ amazon-ml-2026/
 │   ├── samples/                       # Micro-samples for testing and CI smoke tests
 │   └── schemas/                       # Formal schema definitions and contracts
 │
-├── notebooks/                         # Interactive exploratory & visualization notebooks
-│   ├── analysis/                      # Exploratory data profiling notebooks
-│   ├── experiments/                   # Rapid prototyping notebooks
-│   └── visualization/                 # Performance and trade-off visualization
-│
-├── src/    # Core ML system package
-│   ├── data/                          # Streaming data loaders & sampling
-│   ├── normalization/                 # Name, address, and country standardizers
-│   ├── features/                      # String similarity & cross-source features
+├── src/                               # Modular ML system package
+│   ├── README.md                      # Package overview and module architecture
+│   ├── data/                          # Data ingestion, schema validation, and sampling
+│   ├── normalization/                 # Name, address, and country text normalization
+│   ├── features/                      # Pairwise similarity & cross-source features
 │   ├── blocking/                      # Multi-pass candidate generation & pruning
 │   ├── retrieval/                     # BM25, TF-IDF, and dense vector search
 │   ├── matching/                      # GBDT and deep transformer classifiers
@@ -61,22 +61,19 @@ amazon-ml-2026/
 │   ├── postprocessing/                # Format validation & TSV serializing
 │   ├── evaluation/                    # Macro F0.5 evaluator & subgroup metrics
 │   ├── utils/                         # Validation script & logging utilities
+│   │   └── validate_submission.py     # Official submission validator
 │   └── pipeline/                      # End-to-end execution orchestrators
 │
-├── configs/                           # Declarative configurations
-│   ├── data/                          # Data path and sampling configurations
-│   ├── features/                      # Feature extraction settings
-│   ├── blocking/                      # Candidate generation parameters
-│   ├── models/                        # Hyperparameters for ML models
-│   └── experiments/                   # End-to-end experiment pipelines
-│
-├── experiments/                       # 15 Parallel experiment tracks
+├── experiments/                       # Baseline pipeline and parallel experiment tracks
+│   ├── README.md                      # Experiment tracks overview and governance
+│   ├── baseline/                      # Fully functional end-to-end baseline pipeline
 │   ├── kaggle/ (exp_01 - exp_06)      # GPU/TPU candidate generation & deep models
 │   ├── colab/ (exp_01 - exp_03)       # Interactive ablation & model benchmarking
 │   ├── local/ (exp_01 - exp_03)       # Fast CPU baselines & smoke tests
 │   └── sagemaker/ (exp_01 - exp_03)   # Distributed indexing & full inference
 │
 ├── outputs/                           # Ephemeral run artifacts (gitignored)
+│   ├── README.md                      # Outputs organization and artifact contracts
 │   ├── candidates/                    # Generated candidate pair sets
 │   ├── predictions/                   # Pairwise probability predictions
 │   ├── models/                        # Serialized model checkpoints
@@ -85,22 +82,27 @@ amazon-ml-2026/
 │   └── logs/                          # Execution logs
 │
 ├── reports/                           # Synthesized research reports
-│   ├── data_profiling/                # EDA and schema reports
-│   ├── blocking/                      # Candidate recall vs reduction ratio studies
-│   ├── matching/                      # Model comparison & ablation reports
+│   ├── README.md                      # Master directory of synthesized research reports
+│   ├── data_profiling/                # EDA, schema, and topological data reports
+│   ├── blocking/                      # Candidate recall vs reduction ratio benchmarks
+│   ├── matching/                      # Deterministic coverage, risk, and model reports
+│   ├── reproducibility/               # Baseline verification & reproduction reports
 │   ├── experiments/                   # Experiment synthesis summaries
 │   └── final/                         # Final consolidated write-up
 │
 ├── submission/                        # Official submission package structure
+│   ├── README.md                      # Submission bundle instructions & checklist
 │   ├── output/                        # matching_results.tsv & candidate_pairs.tsv
 │   ├── code/business_entity_resolution/ # Standalone runnable pipeline & requirements
 │   └── Documentation_template.md      # Official contest methodology write-up
 │
-└── team/                              # Team governance and tracking
+└── team_communication/                # Team governance and tracking
+    ├── README.md                      # Overview of team tracking & records
     ├── experiment_registry.md         # Master experiment tracking ledger
     ├── experiment_assignments.md      # Task assignments and deliverables
     ├── insight_registry.md            # Empirical findings & architectural decisions
     ├── decisions.md                   # Architectural Decision Records (ADR)
+    ├── baseline_v0.md                 # Baseline specification and benchmark results
     └── ownership.md                   # Module ownership and lead roles
 ```
 
@@ -113,14 +115,17 @@ We manage **15 parallel experiment tracks** distributed across platforms:
 - **Local (3 tracks):** Leak-free CV split design, low-memory CPU blocking, and end-to-end validation smoke testing.
 - **SageMaker (3 tracks):** Corpus-scale dense indexing, cross-encoder distillation, and full test inference.
 
-All experiments are registered and tracked in [`team/experiment_registry.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/team/experiment_registry.md).
+All experiments are registered and tracked in [`team_communication/experiment_registry.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/team_communication/experiment_registry.md).
 
 ---
 
 ## 5. Where Key Assets Live
 - **Problem & Requirements:** [`docs/problem_statement.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/docs/problem_statement.md)
-- **EDA & Profiling:** [`docs/analysis/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/docs/analysis/) and [`reports/data_profiling/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/reports/data_profiling/)
-- **Source Code:** [`src/business_entity_resolution/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/src/business_entity_resolution/)
+- **EDA & Profiling:** [`docs/comprehensive_eda_report.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/docs/comprehensive_eda_report.md), [`docs/analysis/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/docs/analysis/), and [`reports/data_profiling/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/reports/data_profiling/)
+- **Baseline Pipeline Code:** [`experiments/baseline/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/experiments/baseline/)
+- **Production ML Architecture:** [`src/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/src/)
+- **Reproducibility Report:** [`reports/reproducibility/baseline_reproduction.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/reports/reproducibility/baseline_reproduction.md)
+- **Team Coordination:** [`team_communication/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/team_communication/)
 - **Final Submission Package:** [`submission/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/submission/)
 
 ---
@@ -133,4 +138,5 @@ Raw competition data exceeds 2.5 GB and is strictly excluded from Git. Expected 
 ## 7. Reproducibility Philosophy
 - Pure deterministic execution with fixed random seeds (`seed=42`).
 - Modular architecture with clear decoupling between candidate blocking, pairwise matching, and decisioning.
-- Pre-submission validation enforced locally via [`src/business_entity_resolution/utils/validate_submission.py`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/src/business_entity_resolution/utils/validate_submission.py).
+- End-to-end verified baseline documented in [`reports/reproducibility/baseline_reproduction.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/reports/reproducibility/baseline_reproduction.md).
+- Pre-submission validation enforced locally via [`src/utils/validate_submission.py`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/src/utils/validate_submission.py).

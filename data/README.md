@@ -75,12 +75,17 @@ df_s1_test = pd.read_csv(DATA_DIR / "test" / "test_source1.tsv", sep="\t", dtype
 ---
 
 ## 5. Environment Path Configuration
-To configure dataset paths across various execution environments (Local, Kaggle, Colab, SageMaker), use environment variables or `configs/data/base_paths.yaml`:
+To configure dataset paths across various execution environments (Local, Kaggle, Colab, SageMaker), set environment variables or use the dynamic project path resolver in `experiments/baseline/utils_io.py` (`resolve_project_paths`):
 
-```yaml
-data_root:
-  local: "./data/raw"
-  kaggle: "/kaggle/input/amazon-ml-challenge-2026"
-  colab: "/content/drive/MyDrive/amazon-ml-2026/data/raw"
-  sagemaker: "/opt/ml/input/data/raw"
+```bash
+# Environment variable overrides
+export DATA_RAW_DIR="./data/raw"
+export DATA_PROCESSED_DIR="./data/processed"
 ```
+
+Default search mappings:
+- **Local:** `./data/raw`
+- **Kaggle:** `/kaggle/input/amazon-ml-challenge-2026/data/raw`
+- **Colab:** `/content/drive/MyDrive/amazon-ml-2026/data/raw`
+- **SageMaker:** `/opt/ml/input/data/raw`
+

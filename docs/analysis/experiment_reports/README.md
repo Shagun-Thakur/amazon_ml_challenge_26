@@ -1,5 +1,10 @@
-# Experiment Reports
+# Experiment Synthesis Reports (`docs/analysis/experiment_reports`)
 
-Aggregated synthesis reports summarizing findings across parallel experiment runs.
+High-level analytical findings and milestone summaries synthesized across the 15 experiment tracks.
 
-Individual experiment runs log their raw outputs and notes in `experiments/<platform>/<exp_id>/`, while major milestone summaries and comparative benchmarking studies are synthesized here.
+---
+
+## 1. Structure & Cross-References
+- Individual track details and execution templates are maintained under [`experiments/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/experiments/).
+- Master tracking ledger: [`team_communication/experiment_registry.md`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/team_communication/experiment_registry.md).
+- Formal synthesized benchmark reports: [`reports/experiments/`](file:///d:/Projects/Machine_Learning%20Projects/Terminal_Titans_submission/reports/experiments/).

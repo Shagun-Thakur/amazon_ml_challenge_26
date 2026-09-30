@@ -3,8 +3,10 @@
 # ==========================================
 # 1. Datasets & Raw Competition Data
 # ==========================================
-data/raw/
-data/processed/
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
 *.tsv
 *.csv
 # Whitelist small template/dummy files if needed explicitly
@@ -27,11 +29,12 @@ data/processed/
 *.feather
 *.index
 *.faiss
-outputs/models/
-outputs/candidates/
-outputs/predictions/
-outputs/logs/
-outputs/figures/
+outputs/models/*
+outputs/candidates/*
+outputs/predictions/*
+outputs/logs/*
+outputs/figures/*
+!outputs/**/README.md
 
 # ==========================================
 # 3. Python Environment & Cache
@@ -83,6 +86,7 @@ experiments/**/results/*
 experiments/**/artifacts/*
 !experiments/**/artifacts/.gitkeep
 scratch/
+temporary/
 
 # ==========================================
 # 6. Secrets, Credentials & Environment
